@@ -32,16 +32,20 @@ class ListNews extends Component {
       .catch(error => console.error(error));
   }
 
-  deleteArticle = (i) => {
+  removeArticle = (i) => {
     const remainingArticles = this.state.news.filter((article, j) => i !== j);
-    this.setState({ news: remainingArticles });
+    this.setState({ news: remainingArticles })
   }
 
   printCards = () => {
     return (
       <section>
-        {this.state.news.map((article) => (
-          <Card data={article} key={uuidv4()} />
+        {this.state.news.map((article, i) => (
+          <Card 
+            data={article} 
+            key={uuidv4()} 
+            remove={() => this.removeArticle(i)}
+          />
         ))}
       </section>
     );
