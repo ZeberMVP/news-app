@@ -1,5 +1,7 @@
 This SPA shows articles from [The New York Times](https://www.nytimes.com/). You can add and delete articles. You can also write your username and the header will greet you. This app has been made with React.
 
+[Watch the app deployed](https://news-app-zebermvp.netlify.app/)
+
 # Routes
 ## /home
 Here you can write your name and it will be shown in the header
