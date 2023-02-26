@@ -20,7 +20,7 @@ class Card extends Component {
 
   render() {
     return (
-      <MuiCard sx={{ maxWidth: 345 }}>
+      <MuiCard variant="outlined" sx={{ maxWidth: '90vw' }}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {this.props.data.headline}
