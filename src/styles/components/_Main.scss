@@ -1,6 +1,13 @@
-.main {
+main {
     background-color: $xanthous;
-    min-height: 80vh;
-    margin: 0px;
+    min-height: 70vh;
+    margin: 0;
     padding: 15px;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        width: 100%;
+    }
 }

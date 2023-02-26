@@ -1,0 +1,12 @@
+#root > div > main > div > div > input[type=text] {
+    margin-right: 10px;
+}
+#root > div > main > div > div > h1 {
+    font-size: 3em;
+}
+
+@media (min-width: 1100px) {
+    #root > div > main > div > div > h1 {
+        font-size: 3.5em;
+    }
+}

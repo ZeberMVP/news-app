@@ -1,0 +1,17 @@
+Footer {
+    background-color: $raspberry;
+    display: flex;
+    font-size: 2em;
+    min-height: 10vh;
+    text-align: center;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15%;
+    flex-direction: row;
+
+    i {
+        margin-top: 60%; 
+        width: 20%;
+        color: white;
+    }
+}
