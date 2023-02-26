@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from './Card';
 import { v4 as uuidv4 } from 'uuid';
+import { MagnifyingGlass } from 'react-loader-spinner';
 
 class ListNews extends Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class ListNews extends Component {
 
     this.state = {
       news: [],
-      newHeadline: ""
+      newHeadline: "",
+      isLoading: true
     };
   }
 
@@ -27,7 +29,7 @@ class ListNews extends Component {
           url: article.web_url
         }));
         const allArticles = [...firstFiveArticles, ...this.props.news];
-        this.setState({ news: allArticles });
+        this.setState({ news: allArticles, isLoading: false });
       })
       .catch(error => console.error(error));
   }
@@ -41,9 +43,9 @@ class ListNews extends Component {
     return (
       <section>
         {this.state.news.map((article, i) => (
-          <Card 
-            data={article} 
-            key={uuidv4()} 
+          <Card
+            data={article}
+            key={uuidv4()}
             remove={() => this.removeArticle(i)}
           />
         ))}
@@ -55,11 +57,23 @@ class ListNews extends Component {
     return (
       <article className="article-container">
         <h2>Our articles</h2>
-        {this.printCards()}
+        {this.state.isLoading ? (
+          <MagnifyingGlass
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="MagnifyingGlass-loading"
+            wrapperStyle={{}}
+            wrapperClass="MagnifyingGlass-wrapper"
+            glassColor='#c0efff'
+            color='#e15b64'
+          />
+        ) : (
+          this.printCards()
+        )}
       </article>
     );
   }
 }
 
-
-export default ListNews; 
+export default ListNews;

@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: $xanthous;
+    }
+
+    span {
+        border-left: 2px solid $dodger-blue;
+        color: $dodger-blue;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+

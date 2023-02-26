@@ -53,6 +53,7 @@ class Form extends Component {
       <article className="form-add-article">
         <h2>Add articles</h2>
         <form onSubmit={this.handleSubmit}>
+          <label>Headline</label>
           <TextField
             required
             id="headline"
@@ -60,6 +61,7 @@ class Form extends Component {
             value={headline}
             onChange={this.handleChange}
           />
+          <label>Abstract</label>
           <TextField
             required
             id="abstract"
@@ -67,6 +69,7 @@ class Form extends Component {
             value={abstract}
             onChange={this.handleChange}
           />
+          <label>Author</label>
           <TextField
             required
             id="author"
@@ -74,6 +77,7 @@ class Form extends Component {
             value={author}
             onChange={this.handleChange}
           />
+          <label>Url</label>
           <TextField
             required
             id="url"
